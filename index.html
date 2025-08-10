@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manya Udaya Shetty</title>
+    <!-- Favicon for the browser tab -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' fill='%23000000' rx='4'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='500' font-size='20' fill='%23ffffff'>MS</text></svg>">
+    
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Inter:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark {
+            background-color: #1c1c1c; /* Darker, more blackish value */
+            color: #f0f0f0;
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .profile-section {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        body.dark .profile-section {
+            background-color: #242424; /* Darker grey for the card */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .link-text {
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease-in-out;
+        }
+        .link-text:hover {
+            border-color: #9ca3af;
+        }
+        .timeline-container {
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #e5e7eb;
+            transition: background-color 0.3s ease;
+        }
+        body.dark .timeline-container:before {
+            background-color: #4a5568;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+            padding-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            height: 12px;
+            width: 12px;
+            background-color: #d1d5db;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        body.dark .timeline-item:before {
+            background-color: #718096;
+        }
+        .timeline-date {
+            font-weight: 500;
+            color: #4b5563;
+            transition: color 0.3s ease;
+        }
+        body.dark .timeline-date {
+            color: #a0aec0;
+        }
+        body.dark h1, body.dark h2, body.dark h3 {
+            color: #f0f0f0;
+        }
+        body.dark .text-gray-700 {
+            color: #d1d5db;
+        }
+        body.dark .text-gray-500 {
+            color: #a0aec0;
+        }
+        body.dark .text-gray-600 {
+            color: #a0aec0;
+        }
+        body.dark .link-text:hover {
+            border-color: #a0aec0;
+        }
+        .dark-mode-button {
+            background-color: #e5e7eb;
+            color: #4b5563;
+        }
+        .dark-mode-button.dark {
+            background-color: #4a5568;
+            color: #d1d5db;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="profile-section grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Left Column: Name, Photo, Links, and Dark Mode Toggle -->
+            <div class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+                <!-- 
+                    To "crop" the image differently, you can change the Tailwind classes below.
+                    - `src="IMG_3587.jpg"` assumes the file is in the same folder.
+                    - `w-48 h-48` sets a square size (you can change these values).
+                    - `rounded-xl` gives it a soft, rounded corner shape. Change to `rounded-full` for a circle, or remove it for a sharp corner.
+                    - `object-cover` ensures the image fills the container without being stretched.
+                -->
+                <img src="IMG_3587.jpg" alt="Manya Udaya Shetty" class="w-48 h-48 rounded-xl object-cover mb-4">
+                
+                <h1 class="text-3xl font-bold mb-1">Manya Udaya Shetty</h1>
+                
+                <p class="text-sm text-gray-500 mt-2 mb-6">B-Tech in Computer Science Engineering</p>
+
+                <div class="flex flex-col space-y-2 mb-6">
+                    <a href="mailto:shettymanya18@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <span class="link-text">Email</span>
+                    </a>
+                    <a href="https://github.com/manyashetty20" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <span class="link-text">GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/manya-udaya-shetty-6521992a1" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                </div>
+                
+                <!-- Dark Mode Toggle Button -->
+                <button id="theme-toggle" class="dark-mode-button p-2 rounded-full shadow-md hover:scale-105 transition-transform duration-200">
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun hidden">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="md:col-span-2">
+                <!-- Summary Section -->
+                <div class="mb-8">
+                    <p class="text-gray-700 leading-relaxed">
+                        Currently pursuing a B-Tech in CSE from PES University with a minor in Actuarial Studies. A hardworking student with strong multitasking and time management abilities. Devoted to giving my best to all opportunities offered and providing satisfactory results.
+                    </p>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Experience</h2>
+                    <div class="timeline-container">
+                        <!-- Experience 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">08/2023 - Current</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold">Club Head and Research Member, Research Et AI PESU</a>.</span>
+                                Led the club's research and design initiatives, mentoring junior members, and overseeing the development of key projects while also managing the club's UI/UX.
+                            </div>
+                        </div>
+                        <!-- Experience 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">08/2025 - Present</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold"><a href="https://clubs.pes.edu/weal/" target="_blank" class="hover:underline">Head of Design, Weal</a>.</span>
+                                Spearheaded the design strategy, ensuring a consistent and innovative user experience across all platforms. Led a team of designers, managed project timelines, and collaborated with engineering to bring new features to life.
+                            </div>
+                        </div>
+                        <!-- Experience 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">06/2025 - Present</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold"><a href="https://www.utlindia.com/" target="_blank" class="hover:underline">Software Intern, United Telecoms Limited</a>.</span>
+                                Contributed to the development of TenderIQ, a web-based AI-powered platform for analyzing government tenders using FastAPI, Streamlit, and Python.
+                            </div>
+                        </div>
+                        <!-- Experience 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">09/2024 - 07/2025</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold"><a href="https://pes.edu/" target="_blank" class="hover:underline">Teaching Assistant, PES University</a>.</span>
+                                Supported the department in organizing various events, workshops, and seminars.
+                            </div>
+                        </div>
+                        <!-- Experience 5 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">07/2024 - 08/2024</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold"><a href="https://www.simplicontract.com/" target="_blank" class="hover:underline">Software Intern, SimpliContract Technologies Inc.</a>.</span>
+                                Developed a web-based social media platform for college students.
+                            </div>
+                        </div>
+                        <!-- Experience 6 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">01/2024 - Current</div>
+                            <div class="text-gray-700 mt-1">
+                                <span class="font-semibold"><a href="https://pes.edu/" target="_blank" class="hover:underline">Core Team Member, Organising Committee PESU</a>.</span>
+                                Organising events for the entire department and coordinating with guests and volunteers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Education</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-gray-700">
+                                <span class="font-semibold"><a href="https://pes.edu/" target="_blank" class="hover:underline">PES University Bangalore</a></span> - Bachelor of Technology in Computer Science Engineering (CGPA: 9.38)
+                            </p>
+                            <p class="text-gray-500 text-sm">Minor in Actuarial Studies. Completed coursework in Reinforcement Learning with Distinction.</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-700">
+                                <span class="font-semibold"><a href="https://kumarans.org/" target="_blank" class="hover:underline">Sri Kumaran Children's Home, CBSE</a></span> - High School Diploma
+                            </p>
+                            <p class="text-gray-500 text-sm">10th & 12th Grade Percentage: 95.2%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Skills</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="font-semibold mb-2">Technical Skills</h3>
+                            <ul class="text-gray-700 space-y-1 text-sm">
+                                <li class="list-disc list-inside">C Programming & Python</li>
+                                <li class="list-disc list-inside">MERN stack</li>
+                                <li class="list-disc list-inside">JavaScript, HTML, CSS</li>
+                                <li class="list-disc list-inside">FastAPI, Streamlit, Uvicorn</li>
+                                <li class="list-disc list-inside">OpenAI API, Llama, Requests, Pydantic</li>
+                                <li class="list-disc list-inside">UI/UX Design, Network simulation</li>
+                                <li class="list-disc list-inside">iVerilog, ArmSim, MatLab, Cisco Packet Tracer</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-2">Soft Skills</h3>
+                            <ul class="text-gray-700 space-y-1 text-sm">
+                                <li class="list-disc list-inside">Communication</li>
+                                <li class="list-disc list-inside">Time Management</li>
+                                <li class="list-disc list-inside">Leadership Quality</li>
+                                <li class="list-disc list-inside">Prompt Engineering</li>
+                                <li class="list-disc list-inside">Organising and Hospitality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications Section -->
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Certifications</h2>
+                    <ul class="text-gray-700 space-y-1">
+                        <li class="list-disc list-inside">HackerRank Certifications: Python, Frontend Development (React), Introduction to C, SQL, REST API.</li>
+                        <li class="list-disc list-inside">Introduction to LINUX</li>
+                        <li class="list-disc list-inside">Hashgraph Developer by The Hashgraph Association</li>
+                        <li class="list-disc list-inside">Reinforcement Learning from PESU I/O</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+            const body = document.body;
+
+            // Check for saved theme preference or system preference
+            const isDarkMode = localStorage.getItem('theme') === 'dark' || 
+                               (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'));
+
+            if (isDarkMode) {
+                body.classList.add('dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                body.classList.remove('dark');
+                moonIcon.classList.remove('hidden');
+                sunIcon.classList.add('hidden');
+            }
+
+            themeToggleBtn.addEventListener('click', () => {
+                if (body.classList.contains('dark')) {
+                    body.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    moonIcon.classList.remove('hidden');
+                    sunIcon.classList.add('hidden');
+                } else {
+                    body.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    sunIcon.classList.remove('hidden');
+                    moonIcon.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
